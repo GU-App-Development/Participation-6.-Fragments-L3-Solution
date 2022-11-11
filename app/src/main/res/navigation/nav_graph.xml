@@ -22,4 +22,10 @@
         android:name="com.zybook.lightsoutnav.HelpFragment"
         android:label="@string/title_help"
         tools:layout="@layout/fragment_help" />
+
+    <fragment
+        android:id="@+id/navigation_cheats"
+        android:name="com.zybook.lightsoutnav.CheatsFragment"
+        android:label="@string/title_cheats"
+        tools:layout="@layout/fragment_cheats" />
 </navigation>

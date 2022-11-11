@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val navController = navHostFragment.navController
         val appBarConfig = AppBarConfiguration.Builder(
-            R.id.navigation_game, R.id.navigation_color, R.id.navigation_help).build()
+            R.id.navigation_game, R.id.navigation_color, R.id.navigation_help, R.id.navigation_cheats).build()
 
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfig)
         NavigationUI.setupWithNavController(navView, navController)

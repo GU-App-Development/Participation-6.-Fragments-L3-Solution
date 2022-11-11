@@ -18,6 +18,14 @@ class LightsOutGame {
         }
     }
 
+    fun activateWin(){
+        for (row in 0 until GRID_SIZE) {
+            for (col in 0 until GRID_SIZE) {
+                lightsGrid[row][col] = false
+            }
+        }
+    }
+
     fun isLightOn(row: Int, col: Int): Boolean {
         return lightsGrid[row][col]
     }

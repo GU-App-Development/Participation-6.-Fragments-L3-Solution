@@ -19,7 +19,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button style="@style/LightButton" />
+        <Button style="@style/LightButton"
+            android:id="@+id/row0_col0_button" />
         <Button style="@style/LightButton" />
         <Button style="@style/LightButton" />
         <Button style="@style/LightButton" />

@@ -19,6 +19,10 @@ class GameFragment : Fragment() {
     private lateinit var lightGridLayout: GridLayout
     private var lightOnColor = 0
     private var lightOffColor = 0
+    private var enableWinCheat = false
+
+    //cheats
+    private lateinit var row0Col0Button: Button
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -48,6 +52,24 @@ class GameFragment : Fragment() {
 
         val newGameBtn = parentView.findViewById<Button>(R.id.new_game_button)
         newGameBtn.setOnClickListener { startGame() }
+
+
+        //cheat modifications
+        // Extract cheat value from SharedPreferences
+        val winCheatEnabled = sharedPref.getBoolean ("win_cheat", false)
+
+        if (winCheatEnabled){
+            row0Col0Button = parentView.findViewById(R.id.row0_col0_button)
+            row0Col0Button.setOnLongClickListener{ view: View ->
+                //activate cheat
+                game.activateWin()
+                setButtonColors()
+                if (game.isGameOver) {
+                    Toast.makeText(parentView.context, R.string.congrats, Toast.LENGTH_SHORT).show()
+                }
+                return@setOnLongClickListener true
+            }
+        }
 
         return parentView
     }

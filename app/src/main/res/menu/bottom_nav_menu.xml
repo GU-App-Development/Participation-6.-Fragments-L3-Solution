@@ -16,4 +16,9 @@
         android:icon="@drawable/help_icon"
         android:title="@string/title_help" />
 
+    <item
+        android:id="@+id/navigation_cheats"
+        android:icon="@drawable/cheats_icon"
+        android:title="@string/cheats" />
+
 </menu>
